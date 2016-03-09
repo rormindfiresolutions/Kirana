@@ -1,5 +1,5 @@
 class Order < ActiveRecord::Base
 	belongs_to :user
 	belongs_to :address
-	has_many :order_line
+	has_many :order_lines
 end
