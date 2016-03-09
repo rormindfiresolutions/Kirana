@@ -5,7 +5,7 @@ class CreateUserProfiles < ActiveRecord::Migration
     	t.string :last_name
     	t.string :phone_number
     	t.string :email
-    	t.references :user,index: true,foreign_key: true
+    	t.references :user, index: true, foreign_key: true
 
       t.timestamps null: false
     end

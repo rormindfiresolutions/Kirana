@@ -5,7 +5,7 @@ class CreateBrands < ActiveRecord::Migration
     	t.boolean :is_approved
     	t.boolean :is_active
 
-      t.timestamps null: false
+     t.timestamps null: false
     end
   end
 end

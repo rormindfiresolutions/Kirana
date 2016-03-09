@@ -8,9 +8,6 @@ class CreateShopProducts < ActiveRecord::Migration
     	t.float :selling_price
     	t.float :mrp
       t.references :shop_profile, foreign_key: true
-      #t.references :product, foreign_key: true
-      # t.references :category, foreign_key: true
-
     	
       t.timestamps null: false
     end

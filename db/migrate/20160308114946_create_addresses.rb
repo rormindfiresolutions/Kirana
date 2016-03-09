@@ -9,7 +9,7 @@ class CreateAddresses < ActiveRecord::Migration
     	t.string :state
     	t.integer :pincode
     	t.string :landmark
-      t.references :user,index: true, foreign_key: true
+      t.references :user, index: true, foreign_key: true
 
       t.timestamps null: false
     end
