@@ -6,8 +6,6 @@ class CreateProducts < ActiveRecord::Migration
     	t.boolean :is_approved
     	t.string :unit_type
     	t.string :product_description
-      # t.references :brand, foreign_key: true
-      # t.references :category, foreign_key: true
     	
       t.timestamps null: false
     end

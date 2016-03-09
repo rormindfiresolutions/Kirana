@@ -4,7 +4,6 @@ class CreateShopInventoryDetails < ActiveRecord::Migration
     	t.string :inventory_type
     	t.string :notes
     	t.float :quantity
-    	#t.references :shop_product, foreign_key: true
     	t.references :shop_inventory, foreign_key: true
     	t.references :shop_profile, foreign_key: true
 

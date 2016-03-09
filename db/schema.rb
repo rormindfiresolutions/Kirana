@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160308121721) do
+ActiveRecord::Schema.define(version: 20160309072026) do
 
   create_table "addresses", force: :cascade do |t|
     t.string   "type",       limit: 255
@@ -80,12 +80,15 @@ ActiveRecord::Schema.define(version: 20160308121721) do
     t.string   "product_description", limit: 255
     t.datetime "created_at",                      null: false
     t.datetime "updated_at",                      null: false
+    t.integer  "category_id",         limit: 4
+    t.integer  "brand_id",            limit: 4
   end
 
   create_table "shop_inventories", force: :cascade do |t|
-    t.float    "quantity",   limit: 24
-    t.datetime "created_at",            null: false
-    t.datetime "updated_at",            null: false
+    t.float    "quantity",        limit: 24
+    t.datetime "created_at",                 null: false
+    t.datetime "updated_at",                 null: false
+    t.integer  "shop_product_id", limit: 4
   end
 
   create_table "shop_inventory_details", force: :cascade do |t|
@@ -96,6 +99,7 @@ ActiveRecord::Schema.define(version: 20160308121721) do
     t.integer  "shop_profile_id",   limit: 4
     t.datetime "created_at",                    null: false
     t.datetime "updated_at",                    null: false
+    t.integer  "shop_product_id",   limit: 4
   end
 
   add_index "shop_inventory_details", ["shop_inventory_id"], name: "fk_rails_494e8ca28c", using: :btree
@@ -111,6 +115,8 @@ ActiveRecord::Schema.define(version: 20160308121721) do
     t.integer  "shop_profile_id",     limit: 4
     t.datetime "created_at",                      null: false
     t.datetime "updated_at",                      null: false
+    t.integer  "product_id",          limit: 4
+    t.integer  "category_id",         limit: 4
   end
 
   add_index "shop_products", ["shop_profile_id"], name: "fk_rails_4012a9ae54", using: :btree
